@@ -11,7 +11,13 @@ function setCart(cart) {
 
 function addToCart(product) {
   const cart = getCart();
-  cart.push(product);
+  // Check if product with same name and size exists
+  const existing = cart.find(item => item.name === product.name && item.size === product.size);
+  if (existing) {
+    existing.quantity += 1;
+  } else {
+    cart.push(product);
+  }
   setCart(cart);
   updateCartCount();
 }
@@ -31,19 +37,28 @@ document.addEventListener('DOMContentLoaded', function() {
     btn.addEventListener('click', function() {
       const productCard = this.closest('.product-card');
       const productName = this.getAttribute('data-product-name');
-      // Find the select element for size/variant within the same product card
-      const select = productCard.querySelector('select');
-      let selectedOption = select ? select.options[select.selectedIndex].text : '';
-      // Extract size and price from option text (e.g., '16oz - $24.99')
+      // If this is a bundle button (no productCard or no select), treat as bundle
+      let isBundle = false;
       let size = '', price = '';
-      if (selectedOption.includes(' - ')) {
-        [size, price] = selectedOption.split(' - ');
-      } else {
-        size = selectedOption;
-        price = this.getAttribute('data-base-price') || '';
+      if (!productCard || !productCard.querySelector('select')) {
+        isBundle = true;
       }
-      // Remove currency symbol and convert to Naira if needed
-      price = price.replace(/[^\d.]/g, '');
+      if (isBundle) {
+        size = 'Bundle';
+        price = this.getAttribute('data-base-price') || '';
+      } else {
+        // Find the select element for size/variant within the same product card
+        const select = productCard.querySelector('select');
+        let selectedOption = select ? select.options[select.selectedIndex].text : '';
+        // Extract size and price from option text (e.g., '16oz - $24.99')
+        if (selectedOption.includes(' - ')) {
+          [size, price] = selectedOption.split(' - ');
+        } else {
+          size = selectedOption;
+          price = this.getAttribute('data-base-price') || '';
+        }
+        price = price.replace(/[^\d.]/g, '');
+      }
       // Compose product object
       const product = {
         name: productName,
@@ -56,7 +71,7 @@ document.addEventListener('DOMContentLoaded', function() {
       this.textContent = 'Added!';
       this.classList.add('bg-accent');
       setTimeout(() => {
-        this.textContent = 'Add to Cart';
+        this.textContent = this.getAttribute('data-product-name').includes('Bundle') ? 'Add Bundle to Cart' : 'Add to Cart';
         this.classList.remove('bg-accent');
       }, 2000);
     });
