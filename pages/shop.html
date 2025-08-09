@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Premium African Honey Collection - Shop | Hive of Health</title>
-    <meta name="description" content="Discover our curated collection of premium African honey varieties. Filter by health benefits, jar sizes, and customer ratings. Free shipping on orders over $50." />
+    <meta name="description" content="Discover our curated collection of premium African honey varieties. Filter by health benefits, jar sizes, and customer ratings. Free shipping on orders over ₦50,000." />
     <link rel="stylesheet" href="../css/main.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -42,11 +42,13 @@
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
                         </svg>
                     </div>
-                    <a href="javascript:void(0)" class="relative p-2 text-text-primary hover:text-primary transition-organic">
+                    <a href="cart.html" class="relative p-2 text-text-primary hover:text-primary transition-organic">
                         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4m0 0L7 13m0 0l-2.5 5M7 13l2.5 5m0 0h8"/>
                         </svg>
-                        <span class="absolute -top-1 -right-1 bg-primary text-white text-xs rounded-full w-5 h-5 flex items-center justify-center">3</span>
+                        <span class="absolute -top-1 -right-1 bg-primary text-white text-xs rounded-full w-5 h-5 flex items-center justify-center cart-count">0</span>
+</body>
+<script src="../cart.js"></script>
                     </a>
                 </div>
 
@@ -77,7 +79,7 @@
                         <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
                             <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
                         </svg>
-                        <span class="font-medium">Free Shipping Over $50</span>
+                        <span class="font-medium">Free Shipping Over ₦50,000</span>
                     </div>
                     <div class="flex items-center space-x-2 text-accent">
                         <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
@@ -123,8 +125,8 @@
                     </p>
                     <div class="flex items-center justify-between mb-4">
                         <div class="text-sm text-text-secondary">
-                            <span class="line-through">$89.97</span>
-                            <span class="ml-2 font-bold text-primary text-xl">$71.98</span>
+                            <span class="line-through">₦89,970</span>
+                            <span class="ml-2 font-bold text-primary text-xl">₦71,980</span>
                         </div>
                     </div>
                     <div class="space-y-2 mb-6">
@@ -132,7 +134,7 @@
                             <svg class="w-4 h-4 text-accent mr-2" fill="currentColor" viewBox="0 0 20 20">
                                 <path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/>
                             </svg>
-                            3x Golden Acacia Honey (16oz)
+                            3x Golden Acacia Honey (1 Litre)
                         </div>
                         <div class="flex items-center text-sm text-text-secondary">
                             <svg class="w-4 h-4 text-accent mr-2" fill="currentColor" viewBox="0 0 20 20">
@@ -141,7 +143,7 @@
                             Free wellness guide included
                         </div>
                     </div>
-                    <button class="w-full btn-primary">Add Bundle to Cart</button>
+                    <button class="w-full btn-primary add-to-cart-btn" data-product-name="Family Immunity Pack" data-base-price="71980">Add Bundle to Cart</button>
                 </div>
 
                 <!-- Natural Energy Bundle -->
@@ -158,8 +160,8 @@
                     </p>
                     <div class="flex items-center justify-between mb-4">
                         <div class="text-sm text-text-secondary">
-                            <span class="line-through">$65.98</span>
-                            <span class="ml-2 font-bold text-primary text-xl">$52.78</span>
+                            <span class="line-through">₦65,980</span>
+                            <span class="ml-2 font-bold text-primary text-xl">₦52,780</span>
                         </div>
                     </div>
                     <div class="space-y-2 mb-6">
@@ -167,7 +169,7 @@
                             <svg class="w-4 h-4 text-accent mr-2" fill="currentColor" viewBox="0 0 20 20">
                                 <path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/>
                             </svg>
-                            2x Highland Wildflower (16oz)
+                            2x Highland Wildflower (1 Litre)
                         </div>
                         <div class="flex items-center text-sm text-text-secondary">
                             <svg class="w-4 h-4 text-accent mr-2" fill="currentColor" viewBox="0 0 20 20">
@@ -176,7 +178,7 @@
                             Energy recipe booklet
                         </div>
                     </div>
-                    <button class="w-full btn-primary">Add Bundle to Cart</button>
+                    <button class="w-full btn-primary add-to-cart-btn" data-product-name="Natural Energy Bundle" data-base-price="52780">Add Bundle to Cart</button>
                 </div>
 
                 <!-- Wellness Starter Kit -->
@@ -193,8 +195,8 @@
                     </p>
                     <div class="flex items-center justify-between mb-4">
                         <div class="text-sm text-text-secondary">
-                            <span class="line-through">$103.97</span>
-                            <span class="ml-2 font-bold text-primary text-xl">$79.99</span>
+                            <span class="line-through">₦103,970</span>
+                            <span class="ml-2 font-bold text-primary text-xl">₦79,990</span>
                         </div>
                     </div>
                     <div class="space-y-2 mb-6">
@@ -202,7 +204,7 @@
                             <svg class="w-4 h-4 text-accent mr-2" fill="currentColor" viewBox="0 0 20 20">
                                 <path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/>
                             </svg>
-                            All 3 honey varieties (8oz each)
+                            All 3 honey varieties (1/5 Litre each)
                         </div>
                         <div class="flex items-center text-sm text-text-secondary">
                             <svg class="w-4 h-4 text-accent mr-2" fill="currentColor" viewBox="0 0 20 20">
@@ -211,7 +213,7 @@
                             Complete wellness handbook
                         </div>
                     </div>
-                    <button class="w-full btn-primary">Add Bundle to Cart</button>
+                    <button class="w-full btn-primary add-to-cart-btn" data-product-name="Wellness Starter Kit" data-base-price="79990">Add Bundle to Cart</button>
                 </div>
             </div>
         </div>
@@ -268,15 +270,15 @@
                             <div class="space-y-3">
                                 <label class="flex items-center">
                                     <input type="checkbox" class="rounded border-primary-200 text-primary focus:ring-primary" />
-                                    <span class="ml-3 text-text-secondary">8oz - Trial Size (15)</span>
+                                    <span class="ml-3 text-text-secondary">1/2 Litre - Trial Size (15)</span>
                                 </label>
                                 <label class="flex items-center">
                                     <input type="checkbox" class="rounded border-primary-200 text-primary focus:ring-primary" />
-                                    <span class="ml-3 text-text-secondary">16oz - Family Size (12)</span>
+                                    <span class="ml-3 text-text-secondary">1 Litre - Personal Use Size (12)</span>
                                 </label>
                                 <label class="flex items-center">
                                     <input type="checkbox" class="rounded border-primary-200 text-primary focus:ring-primary" />
-                                    <span class="ml-3 text-text-secondary">32oz - Bulk Size (8)</span>
+                                    <span class="ml-3 text-text-secondary">4 Litres - Family Size (8)</span>
                                 </label>
                             </div>
                         </div>
@@ -287,19 +289,19 @@
                             <div class="space-y-3">
                                 <label class="flex items-center">
                                     <input type="checkbox" class="rounded border-primary-200 text-primary focus:ring-primary" />
-                                    <span class="ml-3 text-text-secondary">$15 - $25 (8)</span>
+                                    <span class="ml-3 text-text-secondary">₦15,000 - ₦25,000 (8)</span>
                                 </label>
                                 <label class="flex items-center">
                                     <input type="checkbox" class="rounded border-primary-200 text-primary focus:ring-primary" />
-                                    <span class="ml-3 text-text-secondary">$25 - $35 (12)</span>
+                                    <span class="ml-3 text-text-secondary">₦25,000 - ₦35,000 (12)</span>
                                 </label>
                                 <label class="flex items-center">
                                     <input type="checkbox" class="rounded border-primary-200 text-primary focus:ring-primary" />
-                                    <span class="ml-3 text-text-secondary">$35 - $50 (6)</span>
+                                    <span class="ml-3 text-text-secondary">₦35,000 - ₦50,000 (6)</span>
                                 </label>
                                 <label class="flex items-center">
                                     <input type="checkbox" class="rounded border-primary-200 text-primary focus:ring-primary" />
-                                    <span class="ml-3 text-text-secondary">$50+ (4)</span>
+                                    <span class="ml-3 text-text-secondary">₦50,000+ (4)</span>
                                 </label>
                             </div>
                         </div>
@@ -427,14 +429,8 @@
                                     <span class="bg-primary-100 text-primary px-2 py-1 rounded text-xs">Mild Flavor</span>
                                 </div>
                                 <div class="flex items-center justify-between mb-4">
-                                    <div class="flex items-center space-x-2">
-                                        <select class="border border-primary-200 rounded px-2 py-1 text-sm">
-                                            <option>8oz - $18.99</option>
-                                            <option selected>16oz - $24.99</option>
-                                            <option>32oz - $42.99</option>
-                                        </select>
-                                    </div>
-                                    <span class="font-playfair text-xl font-bold text-primary">$24.99</span>
+                                    <!-- Price dropdown removed -->
+                                    <span class="font-playfair text-xl font-bold text-primary">₦24,990</span>
                                 </div>
                                 <div class="flex space-x-2">
                                     <button class="flex-1 btn-primary text-sm py-2 add-to-cart-btn" 
@@ -448,7 +444,7 @@
                                     </button>
                                 </div>
                                 <div class="text-xs text-accent font-medium">
-                                    ✓ Subscribe & Save 15% • Free shipping over $50
+                                    ✓ Subscribe & Save 15% • Free shipping over ₦50,000
                                 </div>
                             </div>
                         </div>
@@ -488,14 +484,8 @@
                                     <span class="bg-primary-100 text-primary px-2 py-1 rounded text-xs">Rich Flavor</span>
                                 </div>
                                 <div class="flex items-center justify-between mb-4">
-                                    <div class="flex items-center space-x-2">
-                                        <select class="border border-primary-200 rounded px-2 py-1 text-sm">
-                                            <option>8oz - $24.99</option>
-                                            <option selected>16oz - $32.99</option>
-                                            <option>32oz - $58.99</option>
-                                        </select>
-                                    </div>
-                                    <span class="font-playfair text-xl font-bold text-primary">$32.99</span>
+                                    <!-- Price dropdown removed -->
+                                    <span class="font-playfair text-xl font-bold text-primary">₦32,990</span>
                                 </div>
                                 <div class="flex space-x-2">
                                     <button class="flex-1 btn-primary text-sm py-2 add-to-cart-btn" 
@@ -509,7 +499,7 @@
                                     </button>
                                 </div>
                                 <div class="text-xs text-accent font-medium">
-                                    ✓ Subscribe & Save 15% • Free shipping over $50
+                                    ✓ Subscribe & Save 15% • Free shipping over ₦50,000
                                 </div>
                             </div>
                         </div>
@@ -549,14 +539,8 @@
                                     <span class="bg-accent-100 text-accent px-2 py-1 rounded text-xs">Rare</span>
                                 </div>
                                 <div class="flex items-center justify-between mb-4">
-                                    <div class="flex items-center space-x-2">
-                                        <select class="border border-primary-200 rounded px-2 py-1 text-sm">
-                                            <option>8oz - $34.99</option>
-                                            <option selected>16oz - $45.99</option>
-                                            <option>32oz - $82.99</option>
-                                        </select>
-                                    </div>
-                                    <span class="font-playfair text-xl font-bold text-primary">$45.99</span>
+                                    <!-- Price dropdown removed -->
+                                    <span class="font-playfair text-xl font-bold text-primary">₦45,990</span>
                                 </div>
                                 <div class="flex space-x-2">
                                     <button class="flex-1 btn-primary text-sm py-2 add-to-cart-btn" 
@@ -570,7 +554,7 @@
                                     </button>
                                 </div>
                                 <div class="text-xs text-accent font-medium">
-                                    ✓ Subscribe & Save 15% • Free shipping over $50
+                                    ✓ Subscribe & Save 15% • Free shipping over ₦50,000
                                 </div>
                             </div>
                         </div>
@@ -610,14 +594,8 @@
                                     <span class="bg-warning/20 text-warning px-2 py-1 rounded text-xs">Vitamin C</span>
                                 </div>
                                 <div class="flex items-center justify-between mb-4">
-                                    <div class="flex items-center space-x-2">
-                                        <select class="border border-primary-200 rounded px-2 py-1 text-sm">
-                                            <option>8oz - $22.99</option>
-                                            <option selected>16oz - $29.99</option>
-                                            <option>32oz - $52.99</option>
-                                        </select>
-                                    </div>
-                                    <span class="font-playfair text-xl font-bold text-primary">$29.99</span>
+                                    <!-- Price dropdown removed -->
+                                    <span class="font-playfair text-xl font-bold text-primary">₦29,990</span>
                                 </div>
                                 <div class="flex space-x-2">
                                     <button class="flex-1 btn-primary text-sm py-2 add-to-cart-btn" 
@@ -668,14 +646,8 @@
                                     <span class="bg-primary-100 text-primary px-2 py-1 rounded text-xs">Soothing</span>
                                 </div>
                                 <div class="flex items-center justify-between mb-4">
-                                    <div class="flex items-center space-x-2">
-                                        <select class="border border-primary-200 rounded px-2 py-1 text-sm">
-                                            <option>8oz - $20.99</option>
-                                            <option selected>16oz - $27.99</option>
-                                            <option>32oz - $48.99</option>
-                                        </select>
-                                    </div>
-                                    <span class="font-playfair text-xl font-bold text-primary">$27.99</span>
+                                    <!-- Price dropdown removed -->
+                                    <span class="font-playfair text-xl font-bold text-primary">₦27,990</span>
                                 </div>
                                 <div class="flex space-x-2">
                                     <button class="flex-1 btn-primary text-sm py-2 add-to-cart-btn" 
@@ -729,14 +701,8 @@
                                     <span class="bg-primary-100 text-primary px-2 py-1 rounded text-xs">Fruity</span>
                                 </div>
                                 <div class="flex items-center justify-between mb-4">
-                                    <div class="flex items-center space-x-2">
-                                        <select class="border border-primary-200 rounded px-2 py-1 text-sm">
-                                            <option>8oz - $26.99</option>
-                                            <option selected>16oz - $35.99</option>
-                                            <option>32oz - $64.99</option>
-                                        </select>
-                                    </div>
-                                    <span class="font-playfair text-xl font-bold text-primary">$35.99</span>
+                                    <!-- Price dropdown removed -->
+                                    <span class="font-playfair text-xl font-bold text-primary">₦35,990</span>
                                 </div>
                                 <div class="flex space-x-2">
                                     <button class="flex-1 btn-primary text-sm py-2 add-to-cart-btn" 
@@ -750,7 +716,7 @@
                                     </button>
                                 </div>
                                 <div class="text-xs text-accent font-medium">
-                                    ✓ Subscribe & Save 15% • Free shipping over $50
+                                    ✓ Subscribe & Save 15% • Free shipping over ₦50,000
                                 </div>
                             </div>
                         </div>
@@ -797,7 +763,7 @@
                     <div class="text-center">
                         <img src="https://images.pexels.com/photos/1638280/pexels-photo-1638280.jpeg?auto=compress&cs=tinysrgb&w=200" alt="Golden Acacia Honey" class="w-24 h-24 object-cover rounded-lg mx-auto mb-3" onerror="this.src='https://images.unsplash.com/photo-1584824486509-112e4181ff6b?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'; this.onerror=null;" />
                         <h4 class="font-playfair font-semibold text-secondary">Golden Acacia</h4>
-                        <p class="text-primary font-bold">$24.99</p>
+                        <p class="text-primary font-bold">₦24,990</p>
                     </div>
 
                     <div class="text-primary text-2xl font-bold">+</div>
@@ -806,7 +772,7 @@
                     <div class="text-center">
                         <img src="https://images.pixabay.com/photo/2018/07/13/15/32/honey-3536057_1280.jpg" alt="Highland Wildflower Honey" class="w-24 h-24 object-cover rounded-lg mx-auto mb-3" onerror="this.src='https://images.unsplash.com/photo-1584824486509-112e4181ff6b?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'; this.onerror=null;" />
                         <h4 class="font-playfair font-semibold text-secondary">Highland Wildflower</h4>
-                        <p class="text-primary font-bold">$32.99</p>
+                        <p class="text-primary font-bold">₦32,990</p>
                     </div>
 
                     <div class="text-primary text-2xl font-bold">=</div>
@@ -815,8 +781,8 @@
                     <div class="text-center">
                         <div class="bg-accent-50 p-4 rounded-lg">
                             <p class="text-text-secondary text-sm mb-2">Bundle Price</p>
-                            <p class="text-2xl font-playfair font-bold text-accent mb-2">$49.99</p>
-                            <p class="text-sm text-accent font-medium">Save $7.99</p>
+                            <p class="text-2xl font-playfair font-bold text-accent mb-2">₦49,990</p>
+                            <p class="text-sm text-accent font-medium">Save ₦7,990</p>
                             <button class="btn-primary mt-4 text-sm px-6">Add Both to Cart</button>
                         </div>
                     </div>
@@ -878,8 +844,8 @@
                     </div>
                     <div class="flex items-center justify-between mb-4">
                         <div class="text-sm text-text-secondary">
-                            <span class="line-through">$89.97</span>
-                            <span class="ml-2 font-bold text-primary text-2xl">$74.99</span>
+                            <span class="line-through">₦89,970</span>
+                            <span class="ml-2 font-bold text-primary text-2xl">₦74,990</span>
                         </div>
                     </div>
                     <button class="w-full btn-primary">Customize Gift Set</button>
@@ -925,8 +891,8 @@
                     </div>
                     <div class="flex items-center justify-between mb-4">
                         <div class="text-sm text-text-secondary">
-                            <span class="line-through">$189.95</span>
-                            <span class="ml-2 font-bold text-primary text-2xl">$149.99</span>
+                            <span class="line-through">₦189,950</span>
+                            <span class="ml-2 font-bold text-primary text-2xl">₦149,990</span>
                         </div>
                     </div>
                     <button class="w-full btn-primary">Customize Luxury Set</button>
@@ -1062,6 +1028,6 @@
             });
         });
     </script>
-<script id="dhws-dataInjector" src="../public/dhws-data-injector.js"></script>
+<!-- <script id="dhws-dataInjector" src="../public/dhws-data-injector.js"></script> -->
 </body>
 </html>
