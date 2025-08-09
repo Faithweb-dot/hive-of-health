@@ -13,8 +13,8 @@
 <body class="bg-background text-text-primary">
     <!-- Navigation Header -->
     <header class="bg-surface shadow-subtle sticky top-0 z-50">
-        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-16">
+        <nav class="max-w-7xl mx-auto px-2 sm:px-4 lg:px-8">
+            <div class="flex flex-wrap justify-between items-center h-16">
                 <!-- Logo -->
                 <div class="flex-shrink-0">
                     <a href="homepage.html" class="flex items-center space-x-2">
@@ -25,7 +25,7 @@
 
                 <!-- Desktop Navigation -->
                 <div class="hidden md:block">
-                    <div class="ml-10 flex items-baseline space-x-8">
+                    <div class="ml-0 md:ml-10 flex flex-col md:flex-row items-start md:items-baseline space-y-2 md:space-y-0 md:space-x-8">
                         <a href="shop.html" class="text-text-primary hover:text-primary transition-organic px-3 py-2 text-sm font-medium">Shop</a>
                         <a href="health_benefits.html" class="text-text-primary hover:text-primary transition-organic px-3 py-2 text-sm font-medium">Health Benefits</a>
                         <a href="our_story.html" class="text-text-primary hover:text-primary transition-organic px-3 py-2 text-sm font-medium">Our Story</a>
@@ -52,7 +52,7 @@
 
                 <!-- Mobile menu button -->
                 <div class="md:hidden">
-                    <button type="button" class="text-text-primary hover:text-primary p-2">
+                    <button type="button" class="text-text-primary hover:text-primary p-2 focus:outline-none">
                         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
                         </svg>
@@ -64,7 +64,7 @@
 
     <!-- Hero Section with Rotating Content -->
     <section class="relative h-screen overflow-hidden">
-        <div class="absolute inset-0 bg-gradient-to-r from-secondary-900/70 to-transparent z-10"></div>
+    <div class="absolute inset-0 bg-gradient-to-r from-secondary-900/70 to-transparent z-10"></div>
         
         <!-- Hero Slide 1 - African Beekeeper -->
         <div class="hero-slide absolute inset-0 transition-opacity duration-1000">
@@ -73,21 +73,21 @@
 
         <!-- Hero Content -->
         <div class="relative z-20 h-full flex items-center">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="max-w-2xl">
-                    <h1 class="font-playfair text-5xl md:text-7xl font-bold text-white mb-6 text-shadow-warm">
+            <div class="max-w-7xl mx-auto px-2 sm:px-4 lg:px-8 w-full">
+                <div class="max-w-2xl w-full">
+                    <h1 class="font-playfair text-3xl xs:text-4xl sm:text-5xl md:text-7xl font-bold text-white mb-4 sm:mb-6 text-shadow-warm leading-tight">
                         Pure Wellness from 
-                        <span class="text-primary font-dancing text-6xl md:text-8xl">African</span> 
+                        <span class="text-primary font-dancing text-4xl xs:text-5xl sm:text-6xl md:text-8xl">African</span> 
                         Traditions
                     </h1>
-                    <p class="text-xl text-white/90 mb-8 leading-relaxed">
+                    <p class="text-base xs:text-lg sm:text-xl text-white/90 mb-6 sm:mb-8 leading-relaxed">
                         Discover the therapeutic power of authentic African honey, sourced directly from trusted farmers who honor centuries-old beekeeping traditions.
                     </p>
-                    <div class="flex flex-col sm:flex-row gap-4">
-                        <a href="shop.html" class="btn-primary text-center">
+                    <div class="flex flex-col xs:flex-row gap-3 xs:gap-4 w-full">
+                        <a href="shop.html" class="btn-primary text-center w-full xs:w-auto">
                             Explore Our Honey
                         </a>
-                        <a href="health_benefits.html" class="bg-white/20 backdrop-blur-sm text-white px-6 py-3 rounded-lg font-semibold hover:bg-white/30 transition-organic text-center">
+                        <a href="health_benefits.html" class="bg-white/20 backdrop-blur-sm text-white px-6 py-3 rounded-lg font-semibold hover:bg-white/30 transition-organic text-center w-full xs:w-auto">
                             Learn Health Benefits
                         </a>
                     </div>
@@ -105,17 +105,17 @@
 
     <!-- Wellness Benefits Grid -->
     <section class="py-20 bg-surface">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <h2 class="font-playfair text-4xl md:text-5xl font-bold text-secondary mb-6">
+        <div class="max-w-7xl mx-auto px-2 sm:px-4 lg:px-8">
+            <div class="text-center mb-10 sm:mb-16">
+                <h2 class="font-playfair text-2xl xs:text-3xl sm:text-4xl md:text-5xl font-bold text-secondary mb-4 sm:mb-6">
                     Nature's Medicine Cabinet
                 </h2>
-                <p class="text-xl text-text-secondary max-w-3xl mx-auto">
+                <p class="text-base xs:text-lg sm:text-xl text-text-secondary max-w-3xl mx-auto">
                     Each jar of our premium African honey delivers targeted health benefits backed by traditional wisdom and modern science.
                 </p>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
                 <!-- Immunity Boost -->
                 <div class="card hover:shadow-warm hover:-translate-y-1 transition-organic cursor-pointer" onclick="window.location.href='health_benefits.html'">
                     <div class="text-center">
@@ -217,7 +217,7 @@
 
     <!-- Meet Our Farmers -->
     <section class="py-20 bg-background">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="max-w-7xl mx-auto px-2 sm:px-4 lg:px-8">
             <div class="text-center mb-16">
                 <h2 class="font-playfair text-4xl md:text-5xl font-bold text-secondary mb-6">
                     Meet Our Farmers
@@ -229,7 +229,7 @@
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <!-- Farmer 1 -->
-                <div class="card text-center">
+                <div class="card text-center mb-8 md:mb-0">
                     <div class="relative mb-6">
                         <img src="https://images.pixabay.com/photo/2020/07/12/07/47/bee-5396362_1280.jpg" alt="Kwame Asante, traditional beekeeper from Ghana" class="w-32 h-32 rounded-full mx-auto object-cover border-4 border-primary-200" onerror="this.src='https://images.unsplash.com/photo-1584824486509-112e4181ff6b?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'; this.onerror=null;" />
                     </div>
@@ -287,7 +287,7 @@
 
     <!-- Product Showcase -->
     <section class="py-20 bg-surface">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="max-w-7xl mx-auto px-2 sm:px-4 lg:px-8">
             <div class="text-center mb-16">
                 <h2 class="font-playfair text-4xl md:text-5xl font-bold text-secondary mb-6">
                     Signature Honey Collection
@@ -299,7 +299,7 @@
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <!-- Acacia Honey -->
-                <div class="card hover:shadow-warm hover:-translate-y-2 transition-organic cursor-pointer" onclick="window.location.href='shop.html'">
+                <div class="card hover:shadow-warm hover:-translate-y-2 transition-organic cursor-pointer mb-8 md:mb-0" onclick="window.location.href='shop.html'">
                     <div class="relative mb-6 overflow-hidden rounded-lg">
                         <img src="https://images.pexels.com/photos/1638280/pexels-photo-1638280.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Golden Acacia Honey jar with acacia flowers" class="w-full h-64 object-cover" onerror="this.src='https://images.unsplash.com/photo-1584824486509-112e4181ff6b?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'; this.onerror=null;" />
                         <div class="absolute top-4 right-4 bg-primary text-white px-3 py-1 rounded-full text-sm font-medium">
@@ -321,7 +321,7 @@
                             </div>
                             <span class="text-sm text-text-secondary">(127 reviews)</span>
                         </div>
-                        <span class="font-playfair text-2xl font-bold text-primary">$24.99</span>
+                        <span class="font-playfair text-2xl font-bold text-primary">₦24.99</span>
                     </div>
                     <div class="flex space-x-2 mb-4">
                         <span class="bg-accent-100 text-accent px-2 py-1 rounded text-xs">Digestive Health</span>
@@ -353,7 +353,7 @@
                             </div>
                             <span class="text-sm text-text-secondary">(89 reviews)</span>
                         </div>
-                        <span class="font-playfair text-2xl font-bold text-primary">$32.99</span>
+                        <span class="font-playfair text-2xl font-bold text-primary">₦32.99</span>
                     </div>
                     <div class="flex space-x-2 mb-4">
                         <span class="bg-warning/20 text-warning px-2 py-1 rounded text-xs">Antioxidants</span>
@@ -385,7 +385,7 @@
                             </div>
                             <span class="text-sm text-text-secondary">(43 reviews)</span>
                         </div>
-                        <span class="font-playfair text-2xl font-bold text-primary">$45.99</span>
+                        <span class="font-playfair text-2xl font-bold text-primary">₦45.99</span>
                     </div>
                     <div class="flex space-x-2 mb-4">
                         <span class="bg-primary-100 text-primary px-2 py-1 rounded text-xs">Skin Health</span>
@@ -417,7 +417,7 @@
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <!-- Testimonial 1 -->
-                <div class="testimonial-card">
+                <div class="testimonial-card mb-8 md:mb-0">
                     <div class="flex items-center mb-4">
                         <img src="https://images.pexels.com/photos/1239291/pexels-photo-1239291.jpeg?auto=compress&cs=tinysrgb&w=150" alt="Sarah Johnson with her family" class="w-16 h-16 rounded-full object-cover mr-4" onerror="this.src='https://images.unsplash.com/photo-1584824486509-112e4181ff6b?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'; this.onerror=null;" />
                         <div>
