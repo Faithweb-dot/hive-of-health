@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Your Cart | Hive of Health</title>
+    <meta name="description" content="View and manage your cart. Checkout premium African honey products from Hive of Health." />
+    <link rel="stylesheet" href="../css/main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+</head>
+<body class="bg-background text-text-primary">
+    <!-- Navigation Header -->
+    <header class="bg-surface shadow-subtle sticky top-0 z-50">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo -->
+                <div class="flex-shrink-0">
+                    <a href="homepage.html" class="flex items-center space-x-2">
+                        <img src="../logo.png" alt="Hive of Health Logo" class="w-10 h-10" style="object-fit:contain;" />
+                        <span class="font-playfair text-2xl font-bold text-secondary">Hive of Health</span>
+                    </a>
+                </div>
+                <!-- Desktop Navigation and Search -->
+                <div class="flex items-center space-x-6 w-full">
+                    <div class="hidden md:block">
+                        <div class="ml-10 flex items-baseline space-x-8">
+                            <a href="shop.html" class="text-text-primary hover:text-primary transition-organic px-3 py-2 text-sm font-medium">Shop</a>
+                            <a href="health_benefits.html" class="text-text-primary hover:text-primary transition-organic px-3 py-2 text-sm font-medium">Health Benefits</a>
+                            <a href="our_story.html" class="text-text-primary hover:text-primary transition-organic px-3 py-2 text-sm font-medium">Our Story</a>
+                            <a href="testimonials.html" class="text-text-primary hover:text-primary transition-organic px-3 py-2 text-sm font-medium">Testimonials</a>
+                            <a href="contact.html" class="text-text-primary hover:text-primary transition-organic px-3 py-2 text-sm font-medium">Contact</a>
+                        </div>
+                    </div>
+                    <div class="flex-1 flex items-center justify-end">
+                        <div class="relative w-full max-w-xs md:max-w-sm">
+                            <input type="search" placeholder="Search honey varieties..." class="w-full px-4 py-2 pl-10 pr-4 text-sm border border-primary-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent" />
+                            <svg class="absolute left-3 top-2.5 w-4 h-4 text-text-secondary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+                            </svg>
+                        </div>
+                        <a href="cart.html" class="relative p-2 text-primary ml-4">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4m0 0L7 13m0 0l-2.5 5M7 13l2.5 5m0 0h8"/>
+                            </svg>
+                            <span class="absolute -top-1 -right-1 bg-primary text-white text-xs rounded-full w-5 h-5 flex items-center justify-center cart-count">0</span>
+                        </a>
+                    </div>
+                </div>
+                <!-- Mobile menu button -->
+                <div class="md:hidden">
+                    <button type="button" class="text-text-primary hover:text-primary p-2">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Cart Section -->
+    <section class="py-16 bg-background min-h-[60vh]">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h1 class="font-playfair text-3xl md:text-4xl font-bold text-secondary mb-8 text-center">Your Cart</h1>
+            <div class="flex justify-end mb-4">
+                                <div id="empty-cart-btn-container"></div>
+                                <!-- Modal for empty cart confirmation -->
+                                                <div id="empty-cart-modal" class="fixed inset-0 z-50 flex items-center justify-center bg-white/10 backdrop-blur-sm hidden">
+                                                      <div class="bg-white rounded-lg shadow-2xl p-6 w-80 text-center" style="box-shadow: 0 8px 40px 8px rgba(0,0,0,0.35), 0 1.5px 8px 0 rgba(0,0,0,0.18);">
+                                        <h2 class="text-xl font-bold text-secondary mb-4">Are you sure?</h2>
+                                        <p class="mb-6 text-text-secondary">This will remove all items from your cart. Are you sure you want to do this?.</p>
+                                        <div class="flex justify-center gap-4">
+                                            <button id="cancel-empty-cart" class="px-4 py-2 rounded bg-gray-200 text-gray-700 font-semibold hover:bg-gray-300">Cancel</button>
+                                              <button id="confirm-empty-cart" class="px-4 py-2 rounded bg-red-100 text-red-700 font-semibold hover:bg-red-200 hover:text-red-800">Yes, Empty Cart</button>
+                                        </div>
+                                    </div>
+                                </div>
+            </div>
+            <div id="cart-items" class="space-y-6"></div>
+            <div id="cart-summary" class="mt-10"></div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-secondary text-white py-16 mt-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div class="col-span-1 md:col-span-2">
+                    <div class="flex items-center space-x-2 mb-6">
+                        <svg class="w-10 h-10 text-primary" viewBox="0 0 40 40" fill="currentColor">
+                            <path d="M20 2L24 8H32L26 14L28 22L20 18L12 22L14 14L8 8H16L20 2Z"/>
+                            <circle cx="20" cy="25" r="8" fill="currentColor" opacity="0.7"/>
+                            <path d="M15 30C15 32 17 34 20 34C23 34 25 32 25 30" stroke="currentColor" stroke-width="2" fill="none"/>
+                        </svg>
+                        <span class="font-playfair text-2xl font-bold">Hive of Health</span>
+                    </div>
+                    <p class="text-secondary-200 leading-relaxed mb-6 max-w-md">
+                        Bringing you the purest African honey with therapeutic benefits, sourced directly from trusted farmers who honor traditional beekeeping practices.
+                    </p>
+                </div>
+                <div>
+                    <h3 class="font-playfair text-lg font-semibold mb-6">Quick Links</h3>
+                    <ul class="space-y-3">
+                        <li><a href="shop.html" class="text-primary font-medium">Shop Honey</a></li>
+                        <li><a href="health_benefits.html" class="text-secondary-200 hover:text-primary transition-organic">Health Benefits</a></li>
+                        <li><a href="our_story.html" class="text-secondary-200 hover:text-primary transition-organic">Our Story</a></li>
+                        <li><a href="testimonials.html" class="text-secondary-200 hover:text-primary transition-organic">Testimonials</a></li>
+                        <li><a href="contact.html" class="text-secondary-200 hover:text-primary transition-organic">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-playfair text-lg font-semibold mb-6">Customer Care</h3>
+                    <ul class="space-y-3">
+                        <li><a href="javascript:void(0)" class="text-secondary-200 hover:text-primary transition-organic">Shipping Info</a></li>
+                        <li><a href="javascript:void(0)" class="text-secondary-200 hover:text-primary transition-organic">Return Policy</a></li>
+                        <li><a href="javascript:void(0)" class="text-secondary-200 hover:text-primary transition-organic">FAQ</a></li>
+                        <li><a href="javascript:void(0)" class="text-secondary-200 hover:text-primary transition-organic">Quality Guarantee</a></li>
+                        <li><a href="javascript:void(0)" class="text-secondary-200 hover:text-primary transition-organic">Wholesale</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-secondary-600 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-secondary-200 text-sm">
+                    © 2025 Hive of Health. All Rights Reserved.
+                </p>
+                <div class="flex space-x-6 mt-4 md:mt-0">
+                    <a href="javascript:void(0)" class="text-secondary-200 hover:text-primary transition-organic text-sm">Privacy Policy</a>
+                    <a href="javascript:void(0)" class="text-secondary-200 hover:text-primary transition-organic text-sm">Terms of Service</a>
+                    <a href="javascript:void(0)" class="text-secondary-200 hover:text-primary transition-organic text-sm">Cookie Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="../cart.js"></script>
+    <script>
+    // Cart rendering logic
+    function renderCart() {
+        const cart = JSON.parse(localStorage.getItem('cart') || '[]');
+        const cartItemsDiv = document.getElementById('cart-items');
+        const cartSummaryDiv = document.getElementById('cart-summary');
+        cartItemsDiv.innerHTML = '';
+        let total = 0;
+        // Show/hide Empty Cart button
+        const emptyBtnContainer = document.getElementById('empty-cart-btn-container');
+        if (cart.length === 0) {
+            cartItemsDiv.innerHTML = '<div class="text-center text-text-secondary text-lg">Your cart is empty.</div>';
+            cartSummaryDiv.innerHTML = '';
+            if (emptyBtnContainer) emptyBtnContainer.innerHTML = '';
+            return;
+        } else {
+            if (emptyBtnContainer) {
+                emptyBtnContainer.innerHTML = '<button id="empty-cart-btn" class="mt-4 sm:mt-0 sm:ml-6 px-4 py-2 bg-red-100 text-red-700 rounded-lg font-semibold hover:bg-red-200 hover:text-red-800 transition-organic">Empty Cart</button>';
+            }
+        }
+        cart.forEach((item, idx) => {
+            const itemTotal = parseFloat(item.price) * (item.quantity || 1);
+            total += itemTotal;
+            cartItemsDiv.innerHTML += `
+                <div class="flex flex-col sm:flex-row items-center justify-between bg-surface rounded-lg p-4 shadow-sm">
+                    <div class="flex-1 text-left">
+                        <div class="font-semibold text-secondary text-lg mb-1">${item.name}</div>
+                        <div class="text-sm text-text-secondary mb-1">Size: <span class="font-medium">${item.size || ''}</span></div>
+                        <div class="text-sm text-text-secondary mb-1">Price: <span class="font-medium">₦${itemTotal.toLocaleString()}</span></div>
+                        <div class="text-sm text-text-secondary flex items-center gap-2">Quantity:
+                            <button class="quantity-btn px-2 py-1 bg-primary-100 text-primary rounded hover:bg-primary-200" data-action="decrease" data-idx="${idx}">-</button>
+                            <span class="font-medium min-w-[2ch] inline-block text-center">${item.quantity || 1}</span>
+                            <button class="quantity-btn px-2 py-1 bg-primary-100 text-primary rounded hover:bg-primary-200" data-action="increase" data-idx="${idx}">+</button>
+                        </div>
+                    </div>
+                    <button onclick="removeFromCart(${idx})" class="mt-4 sm:mt-0 sm:ml-6 px-4 py-2 bg-accent text-white rounded-lg font-semibold hover:bg-accent-600 transition-organic">Remove</button>
+                </div>
+            `;
+        });
+        cartSummaryDiv.innerHTML = `
+            <div class="bg-primary-50 rounded-lg p-6 flex flex-col items-center mt-8">
+                <div class="text-xl font-bold text-primary mb-2">Total: ₦${total.toLocaleString()}</div>
+                <button class="btn-primary w-full max-w-xs mt-4">Proceed to Checkout</button>
+            </div>
+        `;
+    }
+    function removeFromCart(idx) {
+        let cart = JSON.parse(localStorage.getItem('cart') || '[]');
+        cart.splice(idx, 1);
+        localStorage.setItem('cart', JSON.stringify(cart));
+        renderCart();
+        if (typeof updateCartCount === 'function') updateCartCount();
+    }
+    document.addEventListener('DOMContentLoaded', function() {
+        renderCart();
+        // Delegate quantity button clicks
+        document.getElementById('cart-items').addEventListener('click', function(e) {
+            if (e.target && e.target.classList.contains('quantity-btn')) {
+                const idx = parseInt(e.target.getAttribute('data-idx'));
+                const action = e.target.getAttribute('data-action');
+                let cart = JSON.parse(localStorage.getItem('cart') || '[]');
+                if (cart[idx]) {
+                    if (action === 'increase') {
+                        cart[idx].quantity = (cart[idx].quantity || 1) + 1;
+                    } else if (action === 'decrease') {
+                        cart[idx].quantity = (cart[idx].quantity || 1) - 1;
+                        if (cart[idx].quantity < 1) cart[idx].quantity = 1;
+                    }
+                    localStorage.setItem('cart', JSON.stringify(cart));
+                    renderCart();
+                    if (typeof updateCartCount === 'function') updateCartCount();
+                }
+            }
+        });
+    });
+    // Listen for cart changes from other tabs/pages
+    window.addEventListener('storage', function(e) {
+        if (e.key === 'cart') {
+            renderCart();
+        }
+    });
+    // Empty cart logic
+    document.addEventListener('DOMContentLoaded', function() {
+        // Delegate click for dynamically rendered button
+        document.getElementById('empty-cart-btn-container').addEventListener('click', function(e) {
+            if (e.target && e.target.id === 'empty-cart-btn') {
+                // Show modal
+                document.getElementById('empty-cart-modal').classList.remove('hidden');
+            }
+        });
+
+        // Modal cancel button
+        document.getElementById('cancel-empty-cart').addEventListener('click', function() {
+            document.getElementById('empty-cart-modal').classList.add('hidden');
+        });
+        // Modal confirm button
+        document.getElementById('confirm-empty-cart').addEventListener('click', function() {
+            localStorage.removeItem('cart');
+            renderCart();
+            if (typeof updateCartCount === 'function') updateCartCount();
+            document.getElementById('empty-cart-modal').classList.add('hidden');
+        });
+    });
+    </script>
+</body>
+</html>
